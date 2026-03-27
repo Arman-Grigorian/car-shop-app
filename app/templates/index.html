@@ -2,9 +2,13 @@
 <html>
 <head>
     <title>Car Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome to Car Shop</h1>
-    <a href="/cars">View Cars</a>
+    <div class="container">
+        <h1>Welcome to Car Shop</h1>
+        <p>Explore our amazing collection of cars!</p>
+        <a class="btn" href="/cars">View Cars</a>
+    </div>
 </body>
 </html>

@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cars</title>
+    <title>Our Cars</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Available Cars</h1>
-    <ul>
-        {% for car in cars %}
-        <li>{{ car.name }} - {{ car.price }}</li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <h1>Available Cars</h1>
+        <div class="car-grid">
+            {% for car in cars %}
+            <div class="car-card">
+                <img src="{{ car.image }}" alt="{{ car.name }}">
+                <h2>{{ car.name }}</h2>
+                <p class="price">{{ car.price }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="btn" href="/">Back Home</a>
+    </div>
 </body>
 </html>
